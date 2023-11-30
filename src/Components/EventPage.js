@@ -23,7 +23,7 @@ const EventPage = (props) => {
             const headers = {
                 "Content-type": "application/json",
             };
-            const responseData = await axios.get(`https://hylrlhm638.execute-api.us-east-1.amazonaws.com/dev/get-event?eventId=${eventId}`,headers);
+            const responseData = await axios.get(`https://6v7684jwe3.execute-api.us-east-1.amazonaws.com/dev/get-event?eventId=${eventId}`,headers);
             setEventDetails(responseData.data);
             console.log(eventDetails)
             if(responseData.data.participants){
@@ -55,7 +55,7 @@ const EventPage = (props) => {
         const headers = {
             "Content-type": "application/json",
         };
-        const res = await axios.post(`https://hylrlhm638.execute-api.us-east-1.amazonaws.com/dev/register-event`,eventObject,headers);
+        const res = await axios.post(`https://6v7684jwe3.execute-api.us-east-1.amazonaws.com/dev/register-event`,eventObject,headers);
         if(res.status==200){
             toast.success('Success!', {
                 position: toast.POSITION.TOP_CENTER,

@@ -15,7 +15,7 @@ const Home = () => {
               "Content-type": "application/json",
             };
     
-            const response = await axios.get('https://hylrlhm638.execute-api.us-east-1.amazonaws.com/dev/get-all', { headers });
+            const response = await axios.get('https://6v7684jwe3.execute-api.us-east-1.amazonaws.com/dev/get-all', { headers });
             
             console.log(response); // Make sure to access the data property of the response
             // const eventListRes = JSON.parse(response.data)

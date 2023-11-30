@@ -18,7 +18,7 @@ const LogIn = () => {
     const headers = {
       "Content-type": "application/json",
   };
-    const response = await axios.post('https://hylrlhm638.execute-api.us-east-1.amazonaws.com/dev/login',bodyData,headers);
+    const response = await axios.post('https://6v7684jwe3.execute-api.us-east-1.amazonaws.com/dev/login',bodyData,headers);
     if(response.status==200){
       sessionStorage.setItem("userEmail",values.email);
       toast.success('Success!', {

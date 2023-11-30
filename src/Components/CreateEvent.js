@@ -61,7 +61,7 @@ const CreateEvent = () => {
     const headers = {
         "Content-type": "application/json"
     };
-      const response = await axios.post('https://hylrlhm638.execute-api.us-east-1.amazonaws.com/dev/create-event',bodyData,headers);
+      const response = await axios.post('https://6v7684jwe3.execute-api.us-east-1.amazonaws.com/dev/create-event',bodyData,headers);
       if(response.status==200){
         toast.success('Success!', {
           position: toast.POSITION.TOP_CENTER,

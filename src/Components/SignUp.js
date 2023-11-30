@@ -58,7 +58,7 @@ const SignUp =  () => {
     const headers = {
       "Content-type": "application/json",
   };
-    const response = await axios.post('https://hylrlhm638.execute-api.us-east-1.amazonaws.com/dev/signup',bodyData,headers);
+    const response = await axios.post('https://6v7684jwe3.execute-api.us-east-1.amazonaws.com/dev/signup',bodyData,headers);
     console.log(response); 
     if(response.status==200){
       sessionStorage.setItem("userEmail",values.email);
