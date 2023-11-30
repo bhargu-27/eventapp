@@ -6,6 +6,9 @@ const Home = () => {
     const navigate=useNavigate();
     const [eventList,setEventList]=useState([]);
     useEffect(() => {
+      if(!sessionStorage.getItem("userEmail")){
+        navigate('/login');
+      }
         const fetchData = async () => {
           try {
             const headers = {
