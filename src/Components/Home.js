@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react';
 import { Card, Col, Row,Button } from 'antd';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './../CSS/LogIn.css'
 const Home = () => {
     const navigate=useNavigate();
     const [eventList,setEventList]=useState([]);
@@ -32,8 +33,17 @@ const Home = () => {
       const handleViewDetails=(eventId)=>{
         navigate(`/event/${eventId}`)
       }
+      const handleClickEvent=()=>{
+        navigate('/event/create');
+      }
     return (
     <div>
+      <div>
+      <Button  type="primary"
+        onClick={handleClickEvent}
+        style={{ backgroundColor: '#1890ff', borderColor: '#1890ff' }}
+        className='custom-button'>Create New Event</Button>
+      </div>
   <Row gutter={16}>
   {eventList && eventList.map((element) => (
   <Col span={8} key={element.eventId}>
