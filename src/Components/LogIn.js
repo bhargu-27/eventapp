@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const LogIn = () => {
   const navigate=useNavigate();
+  const signupUrl = `${window.location.origin}/signup`;
   const onFinish = async(values) => {
     console.log('Received values of form: ', values);
     const bodyData={
@@ -78,7 +79,7 @@ const LogIn = () => {
         <Button type="primary" htmlType="submit" className="login-form-button">
           Log in
         </Button>
-        Or <a href="http://localhost:3000/signup">register now!</a>
+        Or <a href={signupUrl}>egister now!</a>
       </Form.Item>
     </Form>
     <ToastContainer/>
